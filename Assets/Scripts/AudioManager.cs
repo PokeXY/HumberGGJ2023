@@ -23,19 +23,13 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    //private void Start()
-    //{
-    //    PlayMusic("Menu Theme"); // Play Music on game start. Replace with background/level music when found/made
-    //    Debug.Log("Playing Menu Theme");
-    //}
-
     public void PlayMusic(string name)
     {
-        Sound s = Array.Find(musicSounds, x => x.name == name); // looking for sound file/check if file match
+        Sound s = Array.Find(musicSounds, x => x.name == name);
 
-        if (s == null)
+        if( s == null)
         {
-            Debug.Log("Sound Not Found");
+            Debug.Log("Sound File not found");
         }
 
         else
@@ -43,22 +37,22 @@ public class AudioManager : MonoBehaviour
             musicSource.clip = s.clip;
             musicSource.Play();
         }
-
-        
     }
 
     public void PlaySFX(string name)
     {
-        Sound s = Array.Find(sfxSounds, x => x.name == name); // looking for sound file/check if file match
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
 
         if (s == null)
         {
-            Debug.Log("Sound Not Found");
+            Debug.Log("Sound File not found");
         }
 
         else
         {
             sfxSource.PlayOneShot(s.clip);
         }
+
     }
+    
 }
