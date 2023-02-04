@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 942717526}
   - component: {fileID: 942717528}
   - component: {fileID: 942717529}
+  - component: {fileID: 942717530}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -525,6 +526,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &942717530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942717523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3dc05f11da7924981fe78aac61971a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 942717525}
+  projectilePrefab: {fileID: 6183515508759197533, guid: 883cde30a9308044d915154b67f19208, type: 3}
+  projectileForce: 5
 --- !u!1 &1267108031
 GameObject:
   m_ObjectHideFlags: 0
