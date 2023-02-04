@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
+    public Animator animator;
+
 
     Vector2 movement;
     Vector2 mousePos;
@@ -26,11 +28,19 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
     }
 
     void FixedUpdate()
     {
+        if (movement.x != 0 || movement.y != 0)
+        {
+            animator.SetFloat("Speed", 1);
+        }
+        else if (movement.x == 0 && movement.y == 0)
+        {
+            animator.SetFloat("Speed", 0);
+        }
+
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
