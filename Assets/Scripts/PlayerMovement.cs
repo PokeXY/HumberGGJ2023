@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
             playerHealth = playerHealth - 1;
             if (playerHealth == 0)
             {
+                //SoundManager.PlaySound(SoundManager.Sound.SOUNDASSET);
                 SceneManager.LoadScene("GameOver");
             }
 

@@ -21,6 +21,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            
             Shoot();
             //projectile.Play();
         }
@@ -32,6 +33,8 @@ public class PlayerShoot : MonoBehaviour
         {
             if (!projectilePrefab)
                 return;
+            SoundManager.PlaySound(SoundManager.Sound.playerMagic); // player shoot noise
+            
             nextFire = Time.time + fireRate;
             GameObject clone = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();

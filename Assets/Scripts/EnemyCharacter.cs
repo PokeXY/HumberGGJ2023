@@ -41,6 +41,7 @@ public class EnemyCharacter : MonoBehaviour
         if (collision.gameObject.tag == "PlayerProjectile")
         {
             Destroy(gameObject);
+            SoundManager.PlaySound(SoundManager.Sound.hitNoise);
             //SceneManager.LoadScene("Game Over");
         }
     }
@@ -63,6 +64,7 @@ public class EnemyCharacter : MonoBehaviour
         if (distance < 7)
         {
             // Rotate our enemy toward the player!
+            
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
         if (distance < 5)
