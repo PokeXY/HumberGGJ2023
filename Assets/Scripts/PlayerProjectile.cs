@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerProjectile : MonoBehaviour
 {
-    public GameObject hitEffect;
+    public GameObject hitEffectWall;
+    public GameObject hitEffectEnemy;
     public float hitEffectTime;
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -13,6 +14,8 @@ public class PlayerProjectile : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject);
+            GameObject effectEnemy = Instantiate(hitEffectEnemy, transform.position, Quaternion.identity);
+            Destroy(effectEnemy, hitEffectTime);
         }
         else if (collision.gameObject.tag == "Player")
         {
@@ -21,10 +24,12 @@ public class PlayerProjectile : MonoBehaviour
         else if (collision.gameObject.tag == "Walls")
         {
             Destroy(gameObject);
+            GameObject effectWall = Instantiate(hitEffectWall, transform.position, Quaternion.identity);
+            Destroy(effectWall, hitEffectTime);
         }
 
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, hitEffectTime);
+
+
         Destroy(gameObject);
     }
 
