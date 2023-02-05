@@ -39,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
+
+        if (collision.gameObject.tag == "BossLevel")
+        {
+            SceneManager.LoadScene("BossScene");
+        }
     }
 
     // Update is called once per frame

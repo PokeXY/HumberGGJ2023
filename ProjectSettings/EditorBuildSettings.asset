@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Tanman Dungeon.unity
     guid: ae1943eab79b77c4e9aceef9206878c1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/coleAudioTest.unity
     guid: cdc2ae127d0a832448e5b359fb27d37a
   - enabled: 0
@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: f427063d99e66a945ab89beeb2b8213a
+  - enabled: 1
+    path: Assets/Scenes/BossScene.unity
+    guid: 63247fc409c1a964e82f6071c2279060
+  - enabled: 1
+    path: Assets/Scenes/LevelScene.unity
+    guid: 433cc7c7987d5b245b724cc1eb55f695
   m_configObjects: {}

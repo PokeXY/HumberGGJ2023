@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         
-        SceneManager.LoadScene("Tanman Dungeon"); // SceneManager.LoadScene("Worldspace Name") // Alternate form of changing scenes
+        SceneManager.LoadScene("LevelScene"); // SceneManager.LoadScene("Worldspace Name") // Alternate form of changing scenes
         SoundManager.PlaySound(SoundManager.Sound.levelMusic); // start level music
         Debug.Log("Play Button");
     }
