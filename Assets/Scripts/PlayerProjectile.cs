@@ -13,7 +13,7 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
             GameObject effectEnemy = Instantiate(hitEffectEnemy, transform.position, Quaternion.identity);
             Destroy(effectEnemy, hitEffectTime);
         }
@@ -26,6 +26,13 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(gameObject);
             GameObject effectWall = Instantiate(hitEffectWall, transform.position, Quaternion.identity);
             Destroy(effectWall, hitEffectTime);
+        }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            Destroy(gameObject);
+            GameObject effectEnemy = Instantiate(hitEffectEnemy, transform.position, Quaternion.identity);
+            Destroy(effectEnemy, hitEffectTime);
+
         }
 
 

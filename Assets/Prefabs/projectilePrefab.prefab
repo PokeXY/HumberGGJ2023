@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2995895823167614535}
   m_Layer: 8
   m_Name: projectilePrefab
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: 07cd0b7e9cf00114cb2a486d0035c076, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffectWall: {fileID: 3533913792197354909, guid: 8186eba29e99c4947b44a169d5f5770a, type: 3}
-  hitEffectEnemy: {fileID: 8971209475748471459, guid: 4f44e7f13bef54c4b8b0226fbfc07394, type: 3}
+  hitEffectEnemy: {fileID: 6183515508759197533, guid: e711f7ff428984e498f4eb36e0c5fb52, type: 3}
   hitEffectTime: 1

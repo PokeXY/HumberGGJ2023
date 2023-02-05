@@ -7,6 +7,8 @@ public class PlayerShoot : MonoBehaviour
     //AudioSource projectile;
     public Transform firePoint;
     public GameObject projectilePrefab;
+    public float fireRate = 0.25f;
+    private float nextFire = 0.0f;
 
     public float projectileForce = 20f;
 
@@ -26,9 +28,15 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.AddForce((firePoint.up * projectileForce), ForceMode2D.Impulse);
+        if (Time.time > nextFire)
+        {
+            if (!projectilePrefab)
+                return;
+            nextFire = Time.time + fireRate;
+            GameObject clone = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
+            rb.AddRelativeForce(Vector2.up * projectileForce, ForceMode2D.Impulse);
+        }
 
     }
 }

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -7634404030911420243}
   - component: {fileID: -7984937817643175298}
   - component: {fileID: 2995895823167614535}
-  m_Layer: 8
-  m_Name: Particle-Blue-Enemy
-  m_TagString: Untagged
+  m_Layer: 11
+  m_Name: enemyProjectilePrefab
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffectWall: {fileID: 3533913792197354909, guid: 8186eba29e99c4947b44a169d5f5770a, type: 3}
-  hitEffectEnemy: {fileID: 6183515508759197533}
+  hitEffectEnemy: {fileID: 5171669705910869811, guid: a5d6fbb8c625eee419aa22141682d95c, type: 3}
   hitEffectTime: 1

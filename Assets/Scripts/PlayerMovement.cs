@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     //AudioSource footsteps;
-
+    public float playerHealth = 5f;
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
@@ -19,6 +20,24 @@ public class PlayerMovement : MonoBehaviour
     {
         //footsteps = GetComponent<AudioSource>();
 
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyProjectile")
+        {
+            playerHealth = playerHealth - 1;
+            if (playerHealth == 0)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     // Update is called once per frame

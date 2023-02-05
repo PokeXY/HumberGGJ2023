@@ -38,9 +38,9 @@ public class EnemyCharacter : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerProjectile")
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
             //SceneManager.LoadScene("Game Over");
         }
     }
@@ -49,8 +49,9 @@ public class EnemyCharacter : MonoBehaviour
     void Update()
     {
 
-        
-        // Get the distance of our player from our enemy
+
+        //Get the distance of our player from our enemy
+
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         // NORMALIIIIIZE
