@@ -20,13 +20,13 @@ public class BossShoot : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
     // Update is called once per frame
     void Update()

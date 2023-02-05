@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 54dfee8b1716e164f91dc2de66ee6dfd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tanman Dungeon.unity
     guid: ae1943eab79b77c4e9aceef9206878c1
   - enabled: 1
@@ -17,10 +17,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tanman Dungeon.unity
     guid: ae1943eab79b77c4e9aceef9206878c1
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 8fbc571b38468b94f88b315d18e5a216
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: f427063d99e66a945ab89beeb2b8213a
   m_configObjects: {}
