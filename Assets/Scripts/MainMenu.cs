@@ -7,8 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
-        AudioManager.Instance.PlaySFX("Menu Click"); //button click
-        SceneManager.LoadScene("coleAudioTest"); // SceneManager.LoadScene("Worldspace Name") // Alternate form of changing scenes
+        
+        SceneManager.LoadScene("Tanman Dungeon"); // SceneManager.LoadScene("Worldspace Name") // Alternate form of changing scenes
         Debug.Log("Play Button");
     }
 
@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         
         Debug.Log("Quit Button");
-        AudioManager.Instance.PlaySFX("Menu Click"); //button click
+        
         Application.Quit();
         
     }
@@ -24,8 +24,8 @@ public class MainMenu : MonoBehaviour
     public void Options()
     {
         Debug.Log("Options Press");
-        AudioManager.Instance.PlaySFX("Menu Click"); //button click
-        Debug.Log("Sound Played");
+        
+        
     }
 
 }
