@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class BossCharacter : MonoBehaviour
 {
@@ -31,14 +32,15 @@ public class BossCharacter : MonoBehaviour
             if (bossHealth == 0)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene("WinScreen");
             }
-            //SceneManager.LoadScene("Game Over");
+
         }
-        else if (collision.gameObject.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-            //SceneManager.LoadScene("Game Over");
-        }
+        //else if (collision.gameObject.tag == "Player")
+        //{
+        //    Destroy(collision.gameObject);
+        //    //SceneManager.LoadScene("Game Over");
+        //}
     }
 
     // Update is called once per frame
